@@ -116,8 +116,10 @@ async function initiateCall() {
           number: phone,
           name: name
         },
-        assistantOverrides: {
-          variableValues: { name, email, phone }
+        const firstName = name.split(' ')[0];
+
+assistantOverrides: {
+  variableValues: { name: firstName, email, phone }
         }
       })
     });
